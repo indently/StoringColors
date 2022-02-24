@@ -30,10 +30,14 @@ class ColorData {
         guard let array = userDefaults.object(forKey: COLOR_KEY) as? [CGFloat] else { return Color.black }
         
         // Create a color from the RGB array
-        let c = Color(.sRGB, red: array[0], green: array[1], blue: array[2], opacity: array[3])
+        let color = Color(.sRGB,
+                          red: array[0],
+                          green: array[1],
+                          blue: array[2],
+                          opacity: array[3])
         
         print("Colour loaded!")
-        return c
+        return color
     }
 }
 
